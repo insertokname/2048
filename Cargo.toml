@@ -1,7 +1,9 @@
 [package]
-name = "solver_2048"
+name = "game_2048"
 version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+crossterm = "0.28.1"
 rand = "0.8.5"
+thiserror = "1.0.63"
