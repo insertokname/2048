@@ -7,15 +7,21 @@
 ## on nix
 
 - `nix build` to build
+
 or 
+
 - `nix run` to run
 
-## requirements
+## other systems:
+
+### requirements
  
 - just [cargo](https://rustup.rs/)
 
-## compiling
+### compiling
 
 - `cargo build --bin cli` to build
+  
 or
+
 - `cargo run --bin cli` to run
