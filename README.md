@@ -2,6 +2,8 @@
 
 [2048](https://github.com/gabrielecirulli/2048) clone made in rust for the console 
 
+![game-screenshot](screenshot.png)
+
 # compilation
 
 ## on nix
