@@ -27,32 +27,6 @@ impl Game {
         Ok(game)
     }
 
-    pub fn new_test() -> Game{
-        let mut board = board::Board::new();
-        board.board[2][0] = 4;
-        board.board[3][0] = 8;
-        board.board[3][1] = 4;
-        board.board[3][3] = 2;
-        Game { board: board }
-    }
-
-    pub fn new_scaling() -> Game {
-        let mut board = board::Board::new();
-        board.board[0][0] = 2048;
-        board.board[1][0] = 1024;
-        board.board[2][0] = 512;
-        board.board[3][0] = 256;
-        board.board[3][1] = 128;
-        board.board[2][1] = 64;
-        board.board[1][1] = 32;
-        board.board[0][1] = 16;
-        board.board[0][2] = 8;
-        board.board[1][2] = 4;
-        board.board[2][2] = 2;
-        board.board[3][2] = 2;
-        Game { board: board }
-    }
-
     fn generate(&mut self) -> Result<(), Box<dyn std::error::Error>> {
         let mut avaliable_pos: Vec<(usize, usize)> = Vec::new();
         avaliable_pos.reserve_exact(board::BOARD_SIZE * board::BOARD_SIZE);
@@ -97,14 +71,6 @@ impl Game {
 
     pub fn board_ref(&self) -> &board::Board {
         return &self.board;
-    }
-
-    pub fn is_game_won(&self) -> bool {
-        self.board
-            .board
-            .as_flattened()
-            .iter()
-            .any(|cell| *cell == 2048)
     }
 }
 

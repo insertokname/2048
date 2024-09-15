@@ -148,6 +148,14 @@ impl Board {
         }
         true
     }
+
+    pub fn is_board_won(&self) -> bool {
+        self.board
+            .as_flattened()
+            .iter()
+            .any(|cell| *cell == 2048)
+    }
+
 }
 
 impl std::fmt::Display for Board {
